@@ -1,7 +1,0 @@
-python=3.10.0=h96c0403_3
-onc=2.3.5=pypi_0
-streamlit=1.5.1=pypi_0
-plotly=5.6.0=pypi_0
-pandas=1.4.0=pypi_0
-numpy=1.22.2=py310hcae7c84_0
-python-dateutil=2.8.2=pyhd8ed1ab_0
