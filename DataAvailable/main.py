@@ -38,7 +38,7 @@ with col1:
                       # **Hydrophone Data Availablity Checker**
     ''',unsafe_allow_html=True)
 with col2:
-    st.image('onc_dataTeam_logo.png', width=350)
+   # st.image('onc_dataTeam_logo.png', width=350)
 pwd=st.text_input("Please paste your token:",type="password")
 
 def main():
