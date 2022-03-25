@@ -17,6 +17,7 @@ import sys
 import plotly.express as px
 
 st.cache(suppress_st_warning=True)
+st.set_page_config (layout='wide', page_title='daqt-apps', page_icon='ONCData.png')
 
 #Create a new environment with the latest version of python:
 
