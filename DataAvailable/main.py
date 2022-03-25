@@ -32,12 +32,12 @@ st.set_page_config (layout='centered', page_title='daqt-apps')
 
     
 # containers
-col1, mid, col2 = st.columns([100,1,30])
-with col1:
-    st.markdown('''
+#col1, mid, col2 = st.columns([100,1,30])
+#with col1:
+st.markdown('''
                       # **Hydrophone Data Availablity Checker**
     ''',unsafe_allow_html=True)
-with col2:
+#with col2:
    # st.image('onc_dataTeam_logo.png', width=350)
 pwd=st.text_input("Please paste your token:",type="password")
 
