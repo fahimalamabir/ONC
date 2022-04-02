@@ -41,7 +41,7 @@ col1, col2, buffer= st.columns([1,1,3])
 header  = st.markdown('''
                       # **Hydrophone Data Availablity Checker**
     ''')
-st.sidebar.image("image/onc_dataTeam_logo.png", use_column_width=True)
+st.sidebar.image("png/onc_dataTeam_logo.png", use_column_width=True)
 pwd=st.text_input("Please paste your token:",type="password")
 
 onc = ONC(token=pwd)
