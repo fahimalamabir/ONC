@@ -243,8 +243,8 @@ if pwd:
         data-widget="archiveMap"
         dateFrom={elT}
         dateTo={flT}
-        deviceCode={df['deviceCode']}
-        extension={df['extension']}
+        deviceCode={deviceD}
+        extension={deviceZ]}
         options="colWidth: 200, height: 800"
         ></section>
             </body>
