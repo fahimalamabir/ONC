@@ -231,7 +231,7 @@ if pwd:
                                 )
                      )
             st.plotly_chart(fig)
-            index = open("dataVail.html").read().format(pwd1=pwd,eltT= elT,flT1 = flT,deviceD1 =deviceD,deviceZ1=deviceZ) 
+            index = open("DataAvailable/dataVail.html").read().format(pwd1=pwd,eltT= elT,flT1 = flT,deviceD1 =deviceD,deviceZ1=deviceZ) 
                                          
            
 
