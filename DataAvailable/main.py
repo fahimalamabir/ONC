@@ -249,7 +249,7 @@ if pwd:
         options="colWidth: 200, height: 800"
         ></section>
             </body>
-            </html>""".format(pwd,elT,flT,deviceD,deviceZ)
+            </html>""",unsafe_allow_html=True.format(pwd,elT,flT,deviceD,deviceZ)
             components.html(template)
 
         else:
