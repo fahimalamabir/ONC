@@ -232,7 +232,7 @@ if pwd:
                      )
             st.plotly_chart(fig)
             deviceD = str(deviceD)
-            template = """<html>
+            template = st.markdown("""<html>
         <head>
         <script src="http://onc.danycabrera.com/assets/crafty-min.js"></script>
         <link rel="stylesheet" type="text/css" href="http://onc.danycabrera.com/oncdw.1.css">
@@ -249,7 +249,7 @@ if pwd:
         options="colWidth: 200, height: 800"
         ></section>
             </body>
-            </html>""",unsafe_allow_html=True.format(pwd,elT,flT,deviceD,deviceZ)
+            </html>""",unsafe_allow_html=True).format(pwd,elT,flT,deviceD,deviceZ)
             components.html(template)
 
         else:
