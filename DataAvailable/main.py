@@ -20,7 +20,6 @@ import streamlit.components.v1 as components
 st.set_page_config(layout='wide')
 
 st.cache(suppress_st_warning=True)
-col1, col2, buffer= st.columns([1,1,3])
 
 #Create a new environment with the latest version of python:
 
@@ -46,7 +45,6 @@ pwd=st.text_input("Please paste your token:",type="password")
 if pwd:
     onc = ONC(token=pwd)
     st.cache(ttl =3600)
-#token = '7f1da660-7dae-4098-b4ff-545afe050690'
 
 
     _,col1, col2,_ = st.columns([1,2,2,1])
