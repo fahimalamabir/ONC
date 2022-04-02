@@ -49,7 +49,7 @@ if pwd:
     st.cache(ttl =3600)
 
 
-    _,col1, col2,_ = st.columns([1,2,2,1])
+    _,col1, col2,_ = st.columns([1,3,2,1])
 
     with col2:
             filters0 = {
