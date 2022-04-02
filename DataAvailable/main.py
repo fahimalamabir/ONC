@@ -236,7 +236,7 @@ if pwd:
         <head>
         <script src="http://onc.danycabrera.com/assets/crafty-min.js"></script>
         <link rel="stylesheet" type="text/css" href="http://onc.danycabrera.com/oncdw.1.css">
-        <script src="http://onc.danycabrera.com/oncdw.1.min.js" id="oncdw" data-token={pwd}></script>
+        <script src="http://onc.danycabrera.com/oncdw.1.min.js" id="oncdw" data-token={}></script>
         </head>
         <body>
         <h3> Data Gap (black color) within the selected deployment range </h3>
