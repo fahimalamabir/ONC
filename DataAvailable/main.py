@@ -231,7 +231,6 @@ if pwd:
                                 )
                      )
             st.plotly_chart(fig)
-            deviceD = str(deviceD)
             template = st.markdown("""<html>
         <head>
         <script src="http://onc.danycabrera.com/assets/crafty-min.js"></script>
