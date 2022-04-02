@@ -231,7 +231,7 @@ if pwd:
                                 )
                      )
             st.plotly_chart(fig)
-            template = st.markdown("""<html>
+              template = """<html>
         <head>
         <script src="http://onc.danycabrera.com/assets/crafty-min.js"></script>
         <link rel="stylesheet" type="text/css" href="http://onc.danycabrera.com/oncdw.1.css">
@@ -243,12 +243,13 @@ if pwd:
         data-widget="archiveMap"
         dateFrom={elT}
         dateTo={flT}
-        deviceCode={deviceD}
-        extension={deviceZ}
+        deviceCode={filt['deviceCode']}
+        extension={filt['extension']}
         options="colWidth: 200, height: 800"
         ></section>
             </body>
-            </html>""",unsafe_allow_html=True)
+            </html>""".format(**locals())
+            components.html(template, width=800, height=1200, scrolling=True)
 
         else:
             st.markdown("No data found, try other extension, please.")
