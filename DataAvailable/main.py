@@ -236,13 +236,11 @@ if pwd:
                                 )
                      )
             st.plotly_chart(fig)
-            components.html ('''
-      <html>
+          template = """<html>
         <head>
-        <meta charset="UTF-8">
         <script src="DataAvailable/crafty-min.js"></script>
         <link rel="stylesheet" type="text/css" href="DataAvailable/oncdw.1.css">
-        <script src="DataAvailable/oncdw.1.min.js" id="oncdw" data-token=22ec8261-50e4-44f3-8e35-a4cf80454ff5></script>
+        <script src="DataAvailable/oncdw.1.min.js" id="oncdw" data-token=7f1da660-7dae-4098-b4ff-545afe050690></script>
         </head>
         <body>
         <h3> Data Gap (black color) within the selected deployment range </h3>
@@ -256,7 +254,7 @@ if pwd:
         ></section>
             </body>
             </html>""".format(**locals())
-            components.html(template, width=None, height=None, scrolling=False)
+            components.html(template, width=800, height=1200, scrolling=True)
       
             </body>
             </html>'''.format(**locals()))
