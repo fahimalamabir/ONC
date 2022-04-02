@@ -237,10 +237,24 @@ if pwd:
                      )
             st.plotly_chart(fig)
             components.html ('''
-      <div id="oncdw"></div>
-    <script src="http://onc.danycabrera.com/assets/crafty-min.js" id="oncdw"</script>
-    <script>oncWidget.Init({renderTo: '#data-widget', params: {"dateFrom": {elT},""dateTo": {flT},
-    "devieCode: {deviceD},"extension": {deviceZ}})</script>''', height=800,width=1500, scrolling=True) 
+      <html>
+        <head>
+        <script src="DataAvailable/crafty-min.js"></script>
+        <link rel="stylesheet" type="text/css" href="DataAvailable/oncdw.1.css">
+        <script src="DataAvailable/oncdw.1.min.js" id="oncdw" data-token={pwd}></script>
+        </head>
+        <body>
+        <h3> Data Gap (black color) within the selected deployment range </h3>
+        <section class="oncWidget"
+        data-widget="archiveMap"
+        dateFrom={elT}
+        dateTo={flT}
+        deviceCode={deviceD}
+        extension={deviceZ}
+        options="colWidth: 200, height: 800"
+        ></section>
+            </body>
+            </html>'''.format(**locals()))
                                          
            
 
