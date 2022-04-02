@@ -159,27 +159,7 @@ if pwd:
             'dateTo'  : flT,
             'extension': deviceZ
             }
-        components.html ('''
-      <html>
-        <head>
-        <meta charset="UTF-8">
-        <script src="DataAvailable/crafty-min.js"></script>
-        <link rel="stylesheet" type="text/css" href="DataAvailable/oncdw.1.css">
-        <script src="DataAvailable/oncdw.1.min.js" id="oncdw" data-token=22ec8261-50e4-44f3-8e35-a4cf80454ff5></script>
-        </head>
-        <body>
-        <h3> Data Gap (black color) within the selected deployment range </h3>
-        <section class="oncWidget"
-        data-widget="archiveMap" 
-        dateFrom=elT
-        dateTo=flT
-        deviceCode=deviceD
-        extension=deviceZ
-        options="colWidth: 160"
-    ></section>
-      
-            </body>
-            </html>'''.format(**locals()))
+
         result1 = onc.getListByDevice(filt,allPages=True)
       
         
@@ -256,10 +236,32 @@ if pwd:
                                 )
                      )
             st.plotly_chart(fig)
+            components.html ('''
+      <html>
+        <head>
+        <meta charset="UTF-8">
+        <script src="DataAvailable/crafty-min.js"></script>
+        <link rel="stylesheet" type="text/css" href="DataAvailable/oncdw.1.css">
+        <script src="DataAvailable/oncdw.1.min.js" id="oncdw" data-token=22ec8261-50e4-44f3-8e35-a4cf80454ff5></script>
+        </head>
+        <body>
+        <h3> Data Gap (black color) within the selected deployment range </h3>
+        <section class="oncWidget"
+        data-widget="archiveMap"
+        dateFrom={elT}
+        dateTo={flT}
+        deviceCode={deviceD}
+        extension={deviceZ}
+        options="colWidth: 200, height: 800"
+        ></section>
+            </body>
+            </html>""".format(**locals())
+            components.html(template, width=None, height=None, scrolling=False)
+      
+            </body>
+            </html>'''.format(**locals()))
 
-                                         
-           
-
+                          
         else:
             st.markdown("No data found, try other extension, please.")
             
