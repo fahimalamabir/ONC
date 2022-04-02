@@ -241,14 +241,14 @@ if pwd:
         <h3> Data Gap (black color) within the selected deployment range </h3>
         <section class="oncWidget"
         data-widget="archiveMap"
-        dateFrom={str(elT)}
-        dateTo={str(flT)}
-        deviceCode={str(deviceD)}
-        extension={str(deviceZ)}
+        dateFrom={elT}
+        dateTo={flT}
+        deviceCode={deviceD}
+        extension={deviceZ}
         options="colWidth: 200, height: 800"
         ></section>
             </body>
-            </html>""".format(**locals())
+            </html>""".format(elT,flT,deviceD,deviceZ)
             components.html(template, width=None, height=None, scrolling=False)
 
         else:
