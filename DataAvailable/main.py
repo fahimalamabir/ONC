@@ -249,7 +249,7 @@ if pwd:
         options="colWidth: 200, height: 800"
         ></section>
             </body>
-            </html>""",unsafe_allow_html=True).
+            </html>""",unsafe_allow_html=True)
             components.html(template)
 
         else:
