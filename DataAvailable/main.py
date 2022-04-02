@@ -236,20 +236,20 @@ if pwd:
         <head>
         <script src="http://onc.danycabrera.com/assets/crafty-min.js"></script>
         <link rel="stylesheet" type="text/css" href="http://onc.danycabrera.com/oncdw.1.css">
-        <script src="http://onc.danycabrera.com/oncdw.1.min.js" id="oncdw" data-token={}></script>
+        <script src="http://onc.danycabrera.com/oncdw.1.min.js" id="oncdw" data-token={pwd}></script>
         </head>
         <body>
         <h3> Data Gap (black color) within the selected deployment range </h3>
         <section class="oncWidget"
         data-widget="archiveMap"
-        dateFrom={}
-        dateTo={}
-        deviceCode={}
-        extension={}
+        dateFrom={elT}
+        dateTo={flT}
+        deviceCode={deviceD}
+        extension={deviceZ}
         options="colWidth: 200, height: 800"
         ></section>
             </body>
-            </html>""",unsafe_allow_html=True).format(pwd,elT,flT,deviceD,deviceZ)
+            </html>""",unsafe_allow_html=True).
             components.html(template)
 
         else:
