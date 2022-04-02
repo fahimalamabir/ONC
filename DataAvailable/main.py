@@ -20,7 +20,7 @@ import streamlit.components.v1 as components
 st.set_page_config(layout='wide')
 
 st.cache(suppress_st_warning=True)
-col1, col2, buffer= st.columns([1,1,3])
+
 
 #Create a new environment with the latest version of python:
 
