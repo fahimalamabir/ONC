@@ -19,7 +19,6 @@ import streamlit.components.v1 as components
 from PIL import Image
 st.set_page_config(layout='wide')
 
-st.cache(suppress_st_warning=True)
 col1, col2, buffer= st.columns([1,1,3])
 
 #Create a new environment with the latest version of python:
@@ -68,7 +67,8 @@ with col2:
                   selector=dict(mode='markers'))
         fig0.update_layout(title = 'Location of the devices', title_x=0.5)
         col2.plotly_chart(fig0) 
-    
+st.cache()
+   
 with col1:
 
     df_hy = []
