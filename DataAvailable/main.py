@@ -244,14 +244,11 @@ if pwd:
         </head>
         <body>
         <h3> Data Gap (black color) within the selected deployment range </h3>
-        <section class="oncWidget"
-        data-widget="archiveMap"
-        dateFrom={elT}
-        dateTo={flT}
-        deviceCode={deviceD}
-        extension={deviceZ}
-        options="colWidth: 200, height: 800"
-        ></section>
+     <div class="main">
+			<figure class="oncWidget" data-widget="image" data-source="dataPreview" url=`https://data.oceannetworks.ca/api/archivefiles?method=getFile&token=${onc.token}`; options="theme: gallery" </figure>
+		</div>
+		
+</body>
             </body>
             </html>""".format(**locals())
             components.html(template, width=800, height=1200, scrolling=True)
