@@ -168,14 +168,14 @@ if pwd:
         </head>
         <body>
         <h3> Data Gap (black color) within the selected deployment range </h3>
-        <section class="oncWidget"
-        data-widget="archiveMap"
-        dateFrom={elT}
-        dateTo={flT}
-        deviceCode={deviceD}
-        extension={deviceZ}
-        options="colWidth: 200, height: 800"
-        ></section>
+        <section class="oncWidget">
+        data-widget.Init(renderTo:'#archiveMap',
+        params:
+        {"dateFrom":{slT}
+        "dateTo":{flT}
+        "deviceCode":{deviceD}
+        "extension":{deviceZ}})
+        </section>
             </body>
             </html>'''.format(**locals()))
         result1 = onc.getListByDevice(filt,allPages=True)
