@@ -20,11 +20,19 @@ import streamlit.components.v1 as components
 st.set_page_config(layout='wide')
 
 st.cache(suppress_st_warning=True)
+<<<<<<< HEAD
+
+#Create a new environment with the latest version of python:
+
+#   `conda create -n streamlit python=3.10`
+im = 'image/onc_dataTeam_logo.png'
+=======
 
 
 #Create a new environment with the latest version of python:
 
 im = 'DataAvailable/image/onc_dataTeam_logo.png'
+>>>>>>> b7862693dce62f27b66378ede81a3992b32b1200
 st.sidebar.image(im,use_column_width=True)
 st.get_option("theme.primaryColor")
 st.get_option("theme.textColor")
@@ -46,7 +54,6 @@ pwd=st.text_input("Please paste your token:",type="password")
 if pwd:
     onc = ONC(token=pwd)
     st.cache(ttl =3600)
-#token = '7f1da660-7dae-4098-b4ff-545afe050690'
 
 
     _,col1, col2,_ = st.columns([1,2,2,1])
@@ -166,61 +173,61 @@ if pwd:
             + ' and ' + parse(filt['dateTo']).strftime('%Y %b %d'))
             with st.expander("Data:"):
                 st.write(df)
-                if deviceL == 'BACAX' or deviceL == 'BACVP':
-                    if deviceZ == 'mp3':
-                        df_dt =  df.files.apply(lambda x: x.strip('.mp3').strip('-audio').split('_')[3])    
-                        UTC_dt = [pd.Timestamp (x) for x in df_dt]
-                        df['UTC time'] = UTC_dt
-                    elif deviceZ == 'wav':
-                        df_dt =  df.files.apply(lambda x: x.strip('.wav').strip('-HPF.wav').split('_')[3])    
-                        UTC_dt = [pd.Timestamp (x) for x in df_dt]
-                        df['UTC time'] = UTC_dt
-                    elif deviceZ == 'mat':
-                        df_dt =  df.files.apply(lambda x: x.strip('.mat').strip('-spect-small')
+            if deviceL == 'BACAX' or deviceL == 'BACVP':
+                if deviceZ == 'mp3':
+                    df_dt =  df.files.apply(lambda x: x.strip('.mp3').strip('-audio').split('_')[3])    
+                    UTC_dt = [pd.Timestamp (x) for x in df_dt]
+                    df['UTC time'] = UTC_dt
+                elif deviceZ == 'wav':
+                    df_dt =  df.files.apply(lambda x: x.strip('.wav').strip('-HPF.wav').split('_')[3])    
+                    UTC_dt = [pd.Timestamp (x) for x in df_dt]
+                    df['UTC time'] = UTC_dt
+                elif deviceZ == 'mat':
+                    df_dt =  df.files.apply(lambda x: x.strip('.mat').strip('-spect-small')
                                     .strip('-FFT-spect').strip('-FFT-spect-thumb').strip('FFT-spect-small').strip('-spect-thumb')
                                     .strip('-spect').strip('-spect-small')
                                     .strip('-HPF-spect').strip('-HPF-spect-thumb').split('_')[3])   
-                        UTC_dt = [pd.Timestamp (x) for x in df_dt]
-                        df['UTC time'] = UTC_dt
-                    elif deviceZ == 'png':
-                        df_dt =  df.files.apply(lambda x: x.strip('.png').strip('-spect-thumb').strip('-spect').strip('-spect-small').split('_')[3])    
-                        UTC_dt = [pd.Timestamp (x) for x in df_dt]
-                        df['UTC time'] = UTC_dt      
-                    else: 
-                        df_dt =  df.files.apply(lambda x: x.strip(deviceZ).split('_')[3])    
-                        UTC_dt = [pd.Timestamp (x) for x in df_dt]
-                        df['UTC time'] = UTC_dt
-                else:
-                    if deviceZ == 'mp3':
-                        df_dt =  df.files.apply(lambda x: x.strip('.mp3').strip('-audio').split('_')[1])    
-                        UTC_dt = [pd.Timestamp (x) for x in df_dt]
-                        df['UTC time'] = UTC_dt
-                    elif deviceZ == 'flac':
-                        df_dt =  df.files.apply(lambda x: x.strip('.flac').strip('-LPF').split('_')[1])    
-                        UTC_dt = [pd.Timestamp (x) for x in df_dt]
-                        df['UTC time'] = UTC_dt
-                    elif deviceZ == 'wav':
-                        df_dt =  df.files.apply(lambda x: x.strip('.wav').split('_')[1])    
-                        UTC_dt = [pd.Timestamp (x) for x in df_dt]
-                        df['UTC time'] = UTC_dt
-                    elif deviceZ == 'mat':
-                        df_dt =  df.files.apply(lambda x: x.strip('.mat').strip('-spect-small')
+                    UTC_dt = [pd.Timestamp (x) for x in df_dt]
+                    df['UTC time'] = UTC_dt
+                elif deviceZ == 'png':
+                    df_dt =  df.files.apply(lambda x: x.strip('.png').strip('-spect-thumb').strip('-spect').strip('-spect-small').split('_')[3])    
+                    UTC_dt = [pd.Timestamp (x) for x in df_dt]
+                    df['UTC time'] = UTC_dt      
+                else: 
+                    df_dt =  df.files.apply(lambda x: x.strip(deviceZ).split('_')[3])    
+                    UTC_dt = [pd.Timestamp (x) for x in df_dt]
+                    df['UTC time'] = UTC_dt
+            else:
+                if deviceZ == 'mp3':
+                    df_dt =  df.files.apply(lambda x: x.strip('.mp3').strip('-audio').split('_')[1])    
+                    UTC_dt = [pd.Timestamp (x) for x in df_dt]
+                    df['UTC time'] = UTC_dt
+                elif deviceZ == 'flac':
+                    df_dt =  df.files.apply(lambda x: x.strip('.flac').strip('-LPF').split('_')[1])    
+                    UTC_dt = [pd.Timestamp (x) for x in df_dt]
+                    df['UTC time'] = UTC_dt
+                elif deviceZ == 'wav':
+                    df_dt =  df.files.apply(lambda x: x.strip('.wav').split('_')[1])    
+                    UTC_dt = [pd.Timestamp (x) for x in df_dt]
+                    df['UTC time'] = UTC_dt
+                elif deviceZ == 'mat':
+                    df_dt =  df.files.apply(lambda x: x.strip('.mat').strip('-spect-small')
                                     .strip('-FFT-spect').strip('-FFT-spect-thumb').strip('FFT-spect-small').strip('-spect-thumb')
                                     .strip('-spect').strip('-spect-small').strip('-LPF-spect').strip('-LPF-spect-thumb')
                                     .strip('-HPF-spect').strip('-HPF-spect-thumb').split('_')[1])   
-                        UTC_dt = [pd.Timestamp (x) for x in df_dt]
-                        df['UTC time'] = UTC_dt
-                    elif deviceZ == 'png':
-                        df_dt =  df.files.apply(lambda x: x.strip('.png').strip('-spect-small')
+                    UTC_dt = [pd.Timestamp (x) for x in df_dt]
+                    df['UTC time'] = UTC_dt
+                elif deviceZ == 'png':
+                    df_dt =  df.files.apply(lambda x: x.strip('.png').strip('-spect-small')
                                     .strip('-FFT-spect').strip('-FFT-spect-thumb').strip('FFT-spect-small').strip('-spect-thumb')
                                     .strip('-spect').strip('-spect-small').strip('-LPF-spect').strip('-LPF-spect-thumb').split('_')[1])
                     
-                        UTC_dt = [pd.Timestamp (x) for x in df_dt]
-                        df['UTC time'] = UTC_dt      
-                    else: 
-                        df_dt =  df.files.apply(lambda x: x.strip(deviceZ).split('_')[1])    
-                        UTC_dt = [pd.Timestamp (x) for x in df_dt]
-                        df['UTC time'] = UTC_dt
+                    UTC_dt = [pd.Timestamp (x) for x in df_dt]
+                    df['UTC time'] = UTC_dt      
+                else: 
+                    df_dt =  df.files.apply(lambda x: x.strip(deviceZ).split('_')[1])    
+                    UTC_dt = [pd.Timestamp (x) for x in df_dt]
+                    df['UTC time'] = UTC_dt
         
             fig = px.scatter(df, x="files", y="UTC time",
                  hover_data=["files"],
@@ -256,8 +263,3 @@ if pwd:
             st.markdown("No data found, try other extension, please.")
 else:
     st.error("Get a token  from  https://data.oceannetworks.ca/Profile")
-
-
-
-
-
