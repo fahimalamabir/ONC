@@ -16,7 +16,7 @@ import time
 import sys
 import plotly.express as px
 import streamlit.components.v1 as components
-
+from PIL import Image
 st.set_page_config(layout='wide')
 
 st.cache(suppress_st_warning=True)
@@ -41,7 +41,8 @@ col1, col2, buffer= st.columns([1,1,3])
 header  = st.markdown('''
                       # **Hydrophone Data Availablity Checker**
     ''')
-st.sidebar.image("png/onc_dataTeam_logo.png", use_column_width=True)
+im = Image.open("png/onc_dataTeam_logo.png")
+st.sidebar.image(im, use_column_width=True)
 pwd=st.text_input("Please paste your token:",type="password")
 
 onc = ONC(token=pwd)
