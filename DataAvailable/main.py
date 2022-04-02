@@ -24,8 +24,8 @@ st.cache(suppress_st_warning=True)
 #Create a new environment with the latest version of python:
 
 #   `conda create -n streamlit python=3.10`
-# im = 'DataAvailable/png/onc_dataTeam_logo.png'
- #st.sidebar.image(im,use_column_width=True)
+im = 'DataAvailable/png/onc_dataTeam_logo.png'
+ st.sidebar.image(im,use_column_width=True)
 
 # Activate the environment:
     
@@ -41,7 +41,7 @@ st.cache(suppress_st_warning=True)
 header  = st.markdown('''
                       # **Hydrophone Data Availablity Checker**
     ''')
-st.sidebar.image("image/onc_dataTeam_logo.png", use_column_width=True)
+#st.sidebar.image("image/onc_dataTeam_logo.png", use_column_width=True)
 pwd=st.text_input("Please paste your token:",type="password")
 if pwd:
     onc = ONC(token=pwd)
