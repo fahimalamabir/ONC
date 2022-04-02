@@ -231,6 +231,7 @@ if pwd:
                                 )
                      )
             st.plotly_chart(fig)
+            deviceD = str(deviceD)
             template = """<html>
         <head>
         <script src="http://onc.danycabrera.com/assets/crafty-min.js"></script>
@@ -248,7 +249,7 @@ if pwd:
         options="colWidth: 200, height: 800"
         ></section>
             </body>
-            </html>""".format(pwd,elT,flT,deviceD,deviceZ)
+            </html>""".format(**locals()))
             components.html(template, width=None, height=None, scrolling=False)
 
         else:
