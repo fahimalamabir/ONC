@@ -162,20 +162,22 @@ if pwd:
         components.html ('''
       <html>
         <head>
+        <meta charset="UTF-8">
         <script src="DataAvailable/crafty-min.js"></script>
         <link rel="stylesheet" type="text/css" href="DataAvailable/oncdw.1.css">
-        <script src="DataAvailable/oncdw.1.min.js" id="oncdw" data-token={pwd}></script>
+        <script src="DataAvailable/oncdw.1.min.js" id="oncdw" data-token=22ec8261-50e4-44f3-8e35-a4cf80454ff5></script>
         </head>
         <body>
         <h3> Data Gap (black color) within the selected deployment range </h3>
-        <section class="oncWidget">
-        data-widget.Init(renderTo:'#archiveMap',
-        params:
-        {"dateFrom":{slT}
-        "dateTo":{flT}
-        "deviceCode":{deviceD}
-        "extension":{deviceZ}})
-        </section>
+        <section class="oncWidget"
+        data-widget="archiveMap" 
+        dateFrom=elT
+        dateTo=flT
+        deviceCode=deviceD
+        extension=deviceZ
+        options="colWidth: 160"
+    ></section>
+      
             </body>
             </html>'''.format(**locals()))
         result1 = onc.getListByDevice(filt,allPages=True)
