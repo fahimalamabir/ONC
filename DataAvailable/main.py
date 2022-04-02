@@ -237,10 +237,10 @@ if pwd:
                      )
             st.plotly_chart(fig)
             components.html ('''
-<div id="oncdw"></div>
-<script src="http://onc.danycabrera.com/assets/crafty-min.js" id="oncdw"</script>
-<script>oncWidget.Init({renderTo: '#data-widget', params: {"dateFrom": {elT},""dateTo": {flT},
-"devieCode: {deviceD},"extension": {deviceZ}})</script>'''), height=800,width=1500, scrolling=True) 
+      <div id="oncdw"></div>
+    <script src="http://onc.danycabrera.com/assets/crafty-min.js" id="oncdw"</script>
+    <script>oncWidget.Init({renderTo: '#data-widget', params: {"dateFrom": {elT},""dateTo": {flT},
+    "devieCode: {deviceD},"extension": {deviceZ}})</script>''', height=800,width=1500, scrolling=True) 
                                          
            
 
