@@ -245,7 +245,7 @@ if pwd:
         <body>
         <h3> Data Gap (black color) within the selected deployment range </h3>
      <div class="main">
-			<figure class="oncWidget" data-widget="image" data-source="dataPreview" url=`https://data.oceannetworks.ca/api/archivefiles?method=getFile&token=${onc.token}`; options="theme: gallery" </figure>
+			<figure class="oncWidget" data-widget="image" data-source="dataPreview" url=`https://data.oceannetworks.ca/api/archivefiles?method=getFile&token=7f1da660-7dae-4098-b4ff-545afe050690`; options="theme: gallery" </figure>
 		</div>
 		
 </body>
