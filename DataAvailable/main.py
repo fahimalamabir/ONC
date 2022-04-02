@@ -250,7 +250,7 @@ if pwd:
         ></section>
             </body>
             </html>""".format(**locals())
-            components.html(template, width=None, height=None, scrolling=False)
+            components.html(template)
 
         else:
             st.markdown("No data found, try other extension, please.")
