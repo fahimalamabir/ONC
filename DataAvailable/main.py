@@ -159,7 +159,25 @@ if pwd:
             'dateTo'  : flT,
             'extension': deviceZ
             }
-        
+        components.html ('''
+      <html>
+        <head>
+        <script src="DataAvailable/crafty-min.js"></script>
+        <link rel="stylesheet" type="text/css" href="DataAvailable/oncdw.1.css">
+        <script src="DataAvailable/oncdw.1.min.js" id="oncdw" data-token={pwd}></script>
+        </head>
+        <body>
+        <h3> Data Gap (black color) within the selected deployment range </h3>
+        <section class="oncWidget"
+        data-widget="archiveMap"
+        dateFrom={elT}
+        dateTo={flT}
+        deviceCode={deviceD}
+        extension={deviceZ}
+        options="colWidth: 200, height: 800"
+        ></section>
+            </body>
+            </html>'''.format(**locals()))
         result1 = onc.getListByDevice(filt,allPages=True)
       
         
@@ -236,25 +254,7 @@ if pwd:
                                 )
                      )
             st.plotly_chart(fig)
-            components.html ('''
-      <html>
-        <head>
-        <script src="DataAvailable/crafty-min.js"></script>
-        <link rel="stylesheet" type="text/css" href="DataAvailable/oncdw.1.css">
-        <script src="DataAvailable/oncdw.1.min.js" id="oncdw" data-token={pwd}></script>
-        </head>
-        <body>
-        <h3> Data Gap (black color) within the selected deployment range </h3>
-        <section class="oncWidget"
-        data-widget="archiveMap"
-        dateFrom={elT}
-        dateTo={flT}
-        deviceCode={deviceD}
-        extension={deviceZ}
-        options="colWidth: 200, height: 800"
-        ></section>
-            </body>
-            </html>'''.format(**locals()))
+
                                          
            
 
