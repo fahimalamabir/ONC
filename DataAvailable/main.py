@@ -20,19 +20,17 @@ import streamlit.components.v1 as components
 st.set_page_config(layout='wide')
 
 st.cache(suppress_st_warning=True)
-<<<<<<< HEAD
 
 #Create a new environment with the latest version of python:
 
 #   `conda create -n streamlit python=3.10`
-im = 'image/onc_dataTeam_logo.png'
-=======
+#im = 'image/onc_dataTeam_logo.png'
+
 
 
 #Create a new environment with the latest version of python:
 
 im = 'DataAvailable/image/onc_dataTeam_logo.png'
->>>>>>> b7862693dce62f27b66378ede81a3992b32b1200
 st.sidebar.image(im,use_column_width=True)
 st.get_option("theme.primaryColor")
 st.get_option("theme.textColor")
