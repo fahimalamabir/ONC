@@ -231,28 +231,13 @@ if pwd:
                                 )
                      )
             st.plotly_chart(fig)
-            template = """<html>
-        <head>
-        <script src="http://onc.danycabrera.com/assets/crafty-min.js"></script>
-        <link rel="stylesheet" type="text/css" href="http://onc.danycabrera.com/oncdw.1.css">
-        <script src="http://onc.danycabrera.com/oncdw.1.min.js" id="oncdw" data-token={pwd:}></script>
-        </head>
-        <body>
-        <h3> Data Gap (black color) within the selected deployment range </h3>
-        <section class="oncWidget"
-        data-widget="archiveMap"
-        dateFrom={elT:}
-        dateTo={flT:}
-        deviceCode={deviceD:}
-        extension={deviceZ:}
-        options="colWidth: 200, height: 800"
-        ></section>
-            </body>
-            </html>""".format(pwd=pwd,elT =elT,flT =flT,deviceD = deviceD,deviceZ =deviceZ)
-            components.html(template, width=800, height=1200, scrolling=True)
+            index = open("dataVail.html").read().format(pwd1=pwd,eltT= elT,flT1 = flT,deviceD1 =deviceD,deviceZ1=deviceZ) 
+                                         
+           
 
         else:
             st.markdown("No data found, try other extension, please.")
+            
 else:
     st.error("Get a token  from  https://data.oceannetworks.ca/Profile")
 
