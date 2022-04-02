@@ -250,7 +250,6 @@ if pwd:
         ></section>
             </body>
             </html>""",unsafe_allow_html=True)
-            components.html(template)
 
         else:
             st.markdown("No data found, try other extension, please.")
