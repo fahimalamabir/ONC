@@ -25,7 +25,7 @@ st.cache(suppress_st_warning=True)
 
 #   `conda create -n streamlit python=3.10`
 im = 'DataAvailable/png/onc_dataTeam_logo.png'
- st.sidebar.image(im,use_column_width=True)
+st.sidebar.image(im,use_column_width=True)
 
 # Activate the environment:
     
