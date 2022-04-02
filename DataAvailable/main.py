@@ -157,7 +157,7 @@ if pwd:
             'dateTo'  : flT,
             'extension': deviceZ
             }
-        result1 = onc.getListByDevice(filt)
+        result1 = onc.getListByDevice(filt,allPages=True)
         df = pd.DataFrame(result1)
         if len(df) > 0:
             col1.markdown("There are {} files".format(len(df)) + ' from ' + filt['deviceCode'] 
@@ -231,7 +231,8 @@ if pwd:
                                 )
                      )
             st.plotly_chart(fig)
-            index = open("DataAvailable/dataVail.html").read().format(pwd1=pwd,eltT= elT,flT1 = flT,deviceD1 =deviceD,deviceZ1=deviceZ) 
+            index = open("DataAvailable/dataVail.html").read().format(pwd1=pwd,eltT= elT,flT1 = flT,deviceD1 =deviceD,deviceZ1=deviceZ)
+            components.html (index, height=800,width=1500, scrolling=True) 
                                          
            
 
