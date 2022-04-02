@@ -161,20 +161,8 @@ if pwd:
             }
         
         result1 = onc.getListByDevice(filt,allPages=True)
-        template = """<html>
-        <head>
-        <script src="http://onc.danycabrera.com/assets/crafty-min.js"></script>
-        <link rel="stylesheet" type="text/css" href="http://onc.danycabrera.com/oncdw.1.css">
-        <script src="http://onc.danycabrera.com/oncdw.1.min.js" id="oncdw" data-token=7f1da660-7dae-4098-b4ff-545afe050690></script>
-        </head>
-        <body>
-        <h3> Data Gap (black color) within the selected deployment range </h3>
-        <section class="oncWidget"
-        result1 = onc.getListByDevice(filt,allPages=True)
-        options="colWidth: 200, height: 800"
-        ></section>
-            </body>
-            </html>"""
+      
+        
         df = pd.DataFrame(result1)
         if len(df) > 0:
             col1.markdown("There are {} files".format(len(df)) + ' from ' + filt['deviceCode'] 
@@ -248,7 +236,11 @@ if pwd:
                                 )
                      )
             st.plotly_chart(fig)
-            components.html (template, height=800,width=1500, scrolling=True) 
+            components.html ('''
+<div id="oncdw"></div>
+<script src="http://onc.danycabrera.com/assets/crafty-min.js" id="oncdw"</script>
+<script>oncWidget.Init({renderTo: '#data-widget', params: {"dateFrom": {elT},""dateTo": {flT},
+"devieCode: {deviceD},"extension": {deviceZ}})</script>'''), height=800,width=1500, scrolling=True) 
                                          
            
 
