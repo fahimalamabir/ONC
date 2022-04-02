@@ -157,10 +157,22 @@ if pwd:
             'dateTo'  : flT,
             'extension': deviceZ
             }
-        index_rd = open("DataAvailable/dataVail.html",'r',encoding='utf-8')
-        index = index_rd.read().format(pwd1=pwd,elT1=filt['dateFrom'],flT1 =filt['dateTo'],deviceD1 =filt['deviceCode'],deviceZ1=filt['extension'])
-
+        
         result1 = onc.getListByDevice(filt,allPages=True)
+        template = """<html>
+        <head>
+        <script src="http://onc.danycabrera.com/assets/crafty-min.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://onc.danycabrera.com/oncdw.1.css">
+        <script src="http://onc.danycabrera.com/oncdw.1.min.js" id="oncdw" data-token={pwd}></script>
+        </head>
+        <body>
+        <h3> Data Gap (black color) within the selected deployment range </h3>
+        <section class="oncWidget"
+        result1 = onc.getListByDevice(filt,allPages=True)
+        options="colWidth: 200, height: 800"
+        ></section>
+            </body>
+            </html>"""
         df = pd.DataFrame(result1)
         if len(df) > 0:
             col1.markdown("There are {} files".format(len(df)) + ' from ' + filt['deviceCode'] 
