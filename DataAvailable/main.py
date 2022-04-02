@@ -233,21 +233,21 @@ if pwd:
                      )
             st.plotly_chart(fig)
             template = """<html>
-        <head>
-        <script src="http://onc.danycabrera.com/assets/crafty-min.js"></script>
-        <link rel="stylesheet" type="text/css" href="http://onc.danycabrera.com/oncdw.1.css">
-        <script src="http://onc.danycabrera.com/oncdw.1.min.js" id="oncdw" data-token={pwd}></script>
-        </head>
-        <body>
-        <h3> Data Gap (black color) within the selected deployment range </h3>
-        <section class="oncWidget"
-        data-widget="archiveMap"
-        dateFrom={elT}
-        dateTo={flT}
-        deviceCode={deviceD}
-        extension={deviceZ}
-        options="colWidth: 200, height: 800"
-        ></section>
+            <head>
+            <script src="http://onc.danycabrera.com/assets/crafty-min.js"></script>
+            <link rel="stylesheet" type="text/css" href="http://onc.danycabrera.com/oncdw.1.css">
+            <script src="http://onc.danycabrera.com/oncdw.1.min.js" id="oncdw" data-token={pwd}></script>
+            </head>
+            <body>
+            <h3> Data Gap (black color) within the selected deployment range </h3>
+            <section class="oncWidget"
+            data-widget="archiveMap"
+            dateFrom={elT}
+            dateTo={flT}
+            deviceCode={deviceD}
+            extension={deviceZ}
+            options="colWidth: 200, height: 800"
+            ></section>
             </body>
             </html>""".format(**locals())
             components.html(template, width=None, height=None, scrolling=False)
