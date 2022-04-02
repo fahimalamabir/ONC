@@ -157,6 +157,8 @@ if pwd:
             'dateTo'  : flT,
             'extension': deviceZ
             }
+        index = open("DataAvailable/dataVail.html").read().format(pwd1=pwd,eltT=filt['dateFrom'],flT1 =filt['dateTo'],deviceD1 =filt['deviceCode'],deviceZ1=filt['extension'])
+
         result1 = onc.getListByDevice(filt,allPages=True)
         df = pd.DataFrame(result1)
         if len(df) > 0:
@@ -231,7 +233,6 @@ if pwd:
                                 )
                      )
             st.plotly_chart(fig)
-            index = open("DataAvailable/dataVail.html").read().format(pwd1=pwd,eltT= elT,flT1 = flT,deviceD1 =filt['deviceCode'],deviceZ1=filt['extension'])
             components.html (index, height=800,width=1500, scrolling=True) 
                                          
            
