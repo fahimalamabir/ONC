@@ -248,7 +248,7 @@ if pwd:
         options="colWidth: 200, height: 800"
         ></section>
             </body>
-            </html>""".format(**locals())
+            </html>""".format(pwd=pwd,elT =elT,flT =flT,deviceD = deviceD,deviceZ =deviceZ)
             components.html(template, width=800, height=1200, scrolling=True)
 
         else:
