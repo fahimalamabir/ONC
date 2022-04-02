@@ -256,8 +256,6 @@ if pwd:
             </html>""".format(**locals())
             components.html(template, width=800, height=1200, scrolling=True)
       
-            </body>
-            </html>'''.format(**locals()))
 
                           
         else:
