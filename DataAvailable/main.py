@@ -244,7 +244,7 @@ if pwd:
         dateFrom={elT}
         dateTo={flT}
         deviceCode={deviceD}
-        extension={deviceZ]}
+        extension={deviceZ}
         options="colWidth: 200, height: 800"
         ></section>
             </body>
