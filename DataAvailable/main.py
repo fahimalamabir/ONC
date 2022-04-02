@@ -157,7 +157,7 @@ if pwd:
             'dateTo'  : flT,
             'extension': deviceZ
             }
-        index = open("DataAvailable/dataVail.html").read().format(pwd1=pwd,eltT=filt['dateFrom'],flT1 =filt['dateTo'],deviceD1 =filt['deviceCode'],deviceZ1=filt['extension'])
+        index = open("DataAvailable/dataVail.html").read().format(pwd1=pwd,elT1=filt['dateFrom'],flT1 =filt['dateTo'],deviceD1 =filt['deviceCode'],deviceZ1=filt['extension'])
 
         result1 = onc.getListByDevice(filt,allPages=True)
         df = pd.DataFrame(result1)
