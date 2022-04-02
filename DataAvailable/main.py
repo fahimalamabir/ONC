@@ -231,7 +231,7 @@ if pwd:
                                 )
                      )
             st.plotly_chart(fig)
-              template = """<html>
+            template = """<html>
         <head>
         <script src="http://onc.danycabrera.com/assets/crafty-min.js"></script>
         <link rel="stylesheet" type="text/css" href="http://onc.danycabrera.com/oncdw.1.css">
