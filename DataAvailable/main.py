@@ -236,7 +236,7 @@ if pwd:
                                 )
                      )
             st.plotly_chart(fig)
-          template = """<html>
+            template = """<html>
         <head>
         <script src="DataAvailable/crafty-min.js"></script>
         <link rel="stylesheet" type="text/css" href="DataAvailable/oncdw.1.css">
