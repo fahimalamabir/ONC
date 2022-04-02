@@ -157,7 +157,7 @@ if pwd:
             'dateTo'  : flT,
             'extension': deviceZ
             }
-        result1 = onc.getListByDevice(filt, allPages=True)
+        result1 = onc.getListByDevice(filt)
         df = pd.DataFrame(result1)
         if len(df) > 0:
             col1.markdown("There are {} files".format(len(df)) + ' from ' + filt['deviceCode'] 
