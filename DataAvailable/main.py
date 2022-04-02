@@ -40,7 +40,7 @@ header  = st.markdown('''
                       # **Hydrophone Data Availablity Checker**
     ''')
 im = "https://github.com/fahimalamabir/ONC/blob/main/DataAvailable/png/onc_dataTeam_logo.png"
-st.sidebar.image(im, use_column_width=True)
+st.sidebar.image(im)
 pwd=st.text_input("Please paste your token:",type="password")
 
 onc = ONC(token=pwd)
