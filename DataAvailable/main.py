@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 import sys
 import plotly.express as px
 
-st.set_page_config(layout='wide')
+st.set_page_config(layout='center')
 
 st.cache(suppress_st_warning=True)
 
