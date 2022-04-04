@@ -33,6 +33,23 @@ im = 'DataAvailable/image/onc_dataTeam_logo.png'
 st.sidebar.image(im,use_column_width=True)
 st.get_option("theme.primaryColor")
 st.get_option("theme.textColor")
+# Remove whitespace from the top of the page and sidebar
+st.markdown("""
+        <style>
+               .css-18e3th9 {
+                    padding-top: 0rem;
+                    padding-bottom: 10rem;
+                    padding-left: 5rem;
+                    padding-right: 5rem;
+                }
+               .css-1d391kg {
+                    padding-top: 3.5rem;
+                    padding-right: 1rem;
+                    padding-bottom: 3.5rem;
+                    padding-left: 1rem;
+                }
+        </style>
+        """, unsafe_allow_html=True)
 # Activate the environment:
     
 #   `conda activate streamlit`
@@ -53,7 +70,7 @@ if pwd:
     st.cache(ttl =3600)
 
 
-    col1, col2,_,_ = st.columns([4,1,3,1])
+    col1, col2,_,_ = st.columns([3,1,2,1])
 
     with col2:
             filters0 = {
