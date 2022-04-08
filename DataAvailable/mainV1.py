@@ -46,6 +46,10 @@ header {
     font-family: serif;
     color: #00bfff;
 }
+body {
+    font-family: serif;
+    color: #00bfff;
+}
 footer {
     font-family: serif;
     color: #00bfff;
