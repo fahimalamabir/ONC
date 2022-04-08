@@ -29,9 +29,9 @@ st.markdown(
 }
 .sidebar .sidebar-content {
     color: #0000CD;
+    padding-top:2rem;
 }
 div.block-container{padding-top:2rem;font-family: serif;color: #0000CD;}
-div.block-sidebar{padding-top:2rem;}
 .Widget>label {
     color: #0000CD;
     font-family: serif;
