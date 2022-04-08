@@ -101,9 +101,9 @@ st.sidebar.image(im,use_column_width=True)
 # containers
 
 
-header  = st.markdown(<color='blue'>'''
+header  = st.markdown(<*font color='blue'>'''
                       # **Hydrophone Data Availablity Checker**
-    '''</font>,unsafe_allow_html=True)
+    '''</*font>,unsafe_allow_html=True)
 pwd=st.text_input("Please paste your token:",type="password")
 if pwd:
     onc = ONC(token=pwd)
