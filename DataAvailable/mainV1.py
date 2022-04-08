@@ -25,7 +25,6 @@ st.markdown(
     font-family: serif;
 }
 .sidebar .sidebar-content {
-    background-image: linear-gradient(#2e7bcf,#2e7bcf);
     color: black;
 }
 .Widget>label {
