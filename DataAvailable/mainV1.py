@@ -49,6 +49,7 @@ header {
 body {
     font-family: serif;
     color: #00bfff;
+    background-color: coral;
 }
 footer {
     font-family: serif;
