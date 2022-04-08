@@ -28,11 +28,11 @@ st.markdown(
     color: black;
 }
 .Widget>label {
-    color: white;
+    color: blue;
     font-family: serif;
 }
 [class^="st-b"]  {
-    color: white;
+    color: blue;
     font-family: serif;
 }
 .st-bb {
