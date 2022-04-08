@@ -37,7 +37,9 @@ st.markdown(
     font-family: serif;
 }
 .st-bb {
-    background-color: transparent;
+    background-color: #add8e6;
+    font-family: serif;
+    color: #00bfff;
 }
 .st-at {
     background-color: #7cb9e8;
@@ -45,11 +47,6 @@ st.markdown(
 header {
     font-family: serif;
     color: #00bfff;
-}
-body {
-    font-family: serif;
-    color: #00bfff;
-    background-color: coral;
 }
 footer {
     font-family: serif;
