@@ -42,8 +42,13 @@ st.markdown(
 .st-at {
     background-color: #7cb9e8;
 }
+header {
+    font-family: serif;
+    color: #00bfff;
+}
 footer {
     font-family: serif;
+    color: #00bfff;
 }
 .reportview-container .main footer, .reportview-container .main footer a {
     color: white;
