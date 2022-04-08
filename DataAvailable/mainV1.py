@@ -30,6 +30,7 @@ st.markdown(
 .sidebar .sidebar-content {
     color: #0000CD;
 }
+div.block-container{padding-top:2rem;}
 .Widget>label {
     color: #0000CD;
     font-family: serif;
@@ -84,8 +85,6 @@ st.cache(suppress_st_warning=True)
 
 im = 'DataAvailable/image/onc_dataTeam_logo.png'
 st.sidebar.image(im,use_column_width=True)
-st.get_option("theme.primaryColor")
-st.get_option("theme.textColor")
 # Activate the environment:
     
 #   `conda activate streamlit`
