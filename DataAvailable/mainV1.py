@@ -40,7 +40,7 @@ st.markdown(
     background-color: transparent;
 }
 .st-at {
-    background-color: white;
+    background-color: #7cb9e8;
 }
 footer {
     font-family: serif;
