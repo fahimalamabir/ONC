@@ -23,7 +23,9 @@ st.markdown(
 <style>
 .reportview-container .markdown-text-container {
     font-family: serif;
-    color: #0000CD	
+    color: #0000CD;
+    primaryColor: #f32525;
+    textColor :#0828f1;
 }
 .sidebar .sidebar-content {
     color: #0000CD;
@@ -40,9 +42,13 @@ st.markdown(
     background-color: #add8e6;
     font-family: serif;
     color: #00bfff;
+     primaryColor: #f32525;
+    textColor :#0828f1;
 }
 .st-at {
     background-color: #7cb9e8;
+    primaryColor: #f32525;
+    textColor :#0828f1;
 }
 header {
     font-family: serif;
