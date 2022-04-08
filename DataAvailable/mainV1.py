@@ -97,13 +97,8 @@ st.sidebar.image(im,use_column_width=True)
 # Run the code by calling it on the terminal:
     
  #   `streamlit main.py`
- 
-# containers
 
-
-header  = <span style="color:blue"> <h1> Hydrophone Data Availablity Checker**
-    </h1></span>
-st.markdown(header,unsafe_allow_html=True)
+st.markdown(f'<h1 style="color:#6495ed;font-size:24px;">{"Hydrophone Data Availablity Checker"}</h1>', unsafe_allow_html=True)
 pwd=st.text_input("Please paste your token:",type="password")
 if pwd:
     onc = ONC(token=pwd)
