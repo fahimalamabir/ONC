@@ -25,14 +25,14 @@ st.markdown(
     font-family: serif;
 }
 .sidebar .sidebar-content {
-    color: black;
+    color: #f32525;
 }
 .Widget>label {
-    color: blue;
+    color: #f32525;
     font-family: serif;
 }
 [class^="st-b"]  {
-    color: blue;
+    color: #f32525;
     font-family: serif;
 }
 .st-bb {
