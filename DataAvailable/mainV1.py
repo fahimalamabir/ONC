@@ -26,10 +26,10 @@ st.markdown(
 }
 .sidebar .sidebar-content {
     background-image: linear-gradient(#2e7bcf,#2e7bcf);
-    color: white;
+    color: black;
 }
 .Widget>label {
-    color: blue;
+    color: white;
     font-family: serif;
 }
 [class^="st-b"]  {
