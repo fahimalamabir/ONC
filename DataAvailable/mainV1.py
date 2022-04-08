@@ -36,6 +36,10 @@ div.block-container{padding-top:2rem;font-family: serif;color: #0000CD;}
     color: #0000CD;
     font-family: serif;
 }
+body {
+    background-color: #0000CD;
+}
+
 [class^="st-b"]  {
     color: #0000CD	;
     font-family: serif;
@@ -97,9 +101,9 @@ st.sidebar.image(im,use_column_width=True)
 # containers
 
 
-header  = st.markdown('''
+header  = st.markdown(font color=‘blue’'''
                       # **Hydrophone Data Availablity Checker**
-    ''')
+    '''</font>,unsafe_allow_html=True)
 pwd=st.text_input("Please paste your token:",type="password")
 if pwd:
     onc = ONC(token=pwd)
