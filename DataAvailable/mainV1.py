@@ -50,13 +50,15 @@ header {
 }
 footer {
     font-family: serif;
-    color: #00bfff;
+    color: #ace5ee;
 }
 .reportview-container .main footer, .reportview-container .main footer a {
     color: white;
 }
 header .decoration {
     background-image: none;
+    color: #ace5ee;
+    background-color: #7cb9e8;
 }
 
 </style>
