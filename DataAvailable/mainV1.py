@@ -23,29 +23,30 @@ st.markdown(
 <style>
 .reportview-container .markdown-text-container {
     font-family: serif;
+    color: #0000CD	
 }
 .sidebar .sidebar-content {
-    color: #f32525;
+    color: #0000CD;
 }
 .Widget>label {
-    color: #f32525;
+    color: #0000CD;
     font-family: serif;
 }
 [class^="st-b"]  {
-    color: #f32525;
+    color: #0000CD	;
     font-family: serif;
 }
 .st-bb {
     background-color: transparent;
 }
 .st-at {
-    background-color: #0c0080;
+    background-color: white;
 }
 footer {
     font-family: serif;
 }
 .reportview-container .main footer, .reportview-container .main footer a {
-    color: #0c0080;
+    color: white;
 }
 header .decoration {
     background-image: none;
