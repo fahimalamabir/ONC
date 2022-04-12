@@ -194,20 +194,9 @@ if pwd:
         dyl = df_dev['Device code'].unique()
 
         deviceD = st.sidebar.selectbox("Select Device:",dyl)
-
-        df_ext = []
-        for ext in onc.getDataProducts({
-                'locationCode': 'BACNH.H1'
-            }):
-            df_ext.append(ext['extension'])
-        
-        df_ext = pd.DataFrame({'Extension':df_ext})
-
-
-        eyl = df_ext['Extension'].unique()
-
-
-        deviceZ = st.sidebar.selectbox("Available extension:",sorted(eyl))
+  
+        ext = ['flac','mat','fft','wav']
+        deviceZ = st.sidebar.selectbox("Select Extension",sorted(ext))
 
         filt ={
             'deviceCode': deviceD,
