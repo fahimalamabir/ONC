@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+
 from sklearn.model_selection import RandomizedSearchCV
 import hdbscan
 from sklearn.metrics import make_scorer
